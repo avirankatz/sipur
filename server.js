@@ -11,5 +11,6 @@ app.get('/lines', (req, res) => res.json(lines));
 app.post('/line', (req, res) => {
     lines.push(req.body.line);
     res.json(200);
-})
-app.listen(3010);
+});
+app.use(express.static('./dist'));
+app.listen(3030);

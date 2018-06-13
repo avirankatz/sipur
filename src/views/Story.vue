@@ -20,7 +20,7 @@ import { setInterval } from "timers";
   mounted() {
     setInterval(
       () =>
-        Axios.get("http://localhost:3010/lines").then(
+        Axios.get(window.location.port == "8080" ? "http://localhost:3010/lines" : "/lines").then(
           res => (this.$data.lines = res.data)
         ),
       1000
