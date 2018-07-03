@@ -105,7 +105,7 @@ p:nth-child(odd) {
   color: rgba(62, 58, 57, 0.85);
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
 }
 .about {
   float: left;
