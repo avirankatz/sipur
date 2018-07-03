@@ -23,7 +23,7 @@ import Axios from "axios";
   },
   methods: {
     appendLine() {
-      Axios.post(window.location.port == "8080" ? "http://localhost:3010/line" : "/line", { line: this.$data.text }).then(
+      Axios.post(window.location.port == "8080" ? "http://localhost:3030/line" : "/line", { line: this.$data.text }).then(
         (res) => {
           this.$data.text = '';
         },

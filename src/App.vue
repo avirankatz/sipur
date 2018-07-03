@@ -9,12 +9,20 @@
 </template>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Miriam+Libre|Varela+Round");
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: white;
+  h1 {
+    font-family: "Varela Round", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 70px;
+    font-weight: lighter;
+  }
+  p {
+    font-family: "Miriam Libre", sans-serif;
+    font-size: large;
+  }
 }
 #nav {
   padding: 30px;
