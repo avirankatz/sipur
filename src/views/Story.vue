@@ -7,6 +7,16 @@
         {{line}}
       </p>
     </div>
+    <div class="link-container info-box">
+      <h2><span>ספרו לנו > </span>sipur.soficoop.com</h2>
+    </div>
+    <div class="about info-box">
+      <img src="../assets/logo.png" alt="logo" width="350">
+      <h3>
+          Sofi הוא קואופרטיב תוכנה, שזה אומר חברת תוכנה למטרות רווח - במודל בעלות שיתופי ושוויוני. 
+          כל אחת מעובדות הקואופרטיב, בהווה ובעתיד, מהווה בעלים ושותפה שווה, יחד עם שאר העובדות. 
+      </h3>
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -29,6 +39,8 @@ import { setInterval, setTimeout } from "timers";
             : "/lines"
         ).then(res => {
           this.$data.lines = res.data;
+          let el = this.$el.querySelector("p:last-child");
+          if (el != null) el.classList.add("visible");
         }),
       1000
     );
@@ -57,26 +69,52 @@ export default class Home extends Vue {
   margin-top: -27%;
   width: 130%;
   position: absolute;
-  -webkit-animation: spin 100s linear infinite;
-  -moz-animation: spin 100s linear infinite;
-  animation: spin 100s linear infinite;
+  -webkit-animation: spin 150s linear infinite;
+  -moz-animation: spin 150s linear infinite;
+  animation: spin 150s linear infinite;
   z-index: 0;
-  display: table;
 }
 p:last-child {
-  animation: blink-caret 0.75s step-end infinite, typing 3.5s steps(40, end);
-  border-left: 0.15em solid orange;
-  /* display: inline-block; */
-  overflow: hidden;
+  opacity: 0;
+  transition: 1s opacity;
 }
 p:nth-child(odd) {
   color: rgba(62, 58, 57, 0.85);
+}
+.visible {
+  opacity: 1 !important;
 }
 .story-container {
   float: right;
   position: absolute;
   margin-right: 60px;
   z-index: 1;
+}
+.link-container {
+  float: left;
+  direction: rtl;
+  z-index: 1;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+.link-container span {
+  color: #20ac70;
+}
+.info-box {
+  font-family: "Miriam Libre", sans-serif;
+  color: rgba(62, 58, 57, 0.85);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+}
+.about {
+  float: left;
+  direction: rtl;
+  z-index: 1;
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  width: 400px;
 }
 @-moz-keyframes spin {
   100% {
@@ -92,23 +130,6 @@ p:nth-child(odd) {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-  }
-}
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
   }
 }
 </style>
