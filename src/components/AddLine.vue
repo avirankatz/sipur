@@ -68,7 +68,7 @@ img.logo {
 textarea {
   margin: 50px 25px;
   width: calc(100% - 50px);
-  height: 200px;
+  height: 150px;
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
@@ -85,7 +85,7 @@ textarea {
   transition: background-color 0.2s ease 0s;
 }
 textarea:focus {
-  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.75);
   outline-width: 0;
 }
 div.container {
