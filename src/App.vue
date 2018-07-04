@@ -16,12 +16,12 @@
     font-family: "Varela Round", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: lighter;
   }
   p {
     font-family: "Miriam Libre", sans-serif;
-    font-size: large;
+    font-size: x-large;
   }
 }
 #nav {

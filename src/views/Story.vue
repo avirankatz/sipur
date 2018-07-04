@@ -63,7 +63,7 @@ export default class Home extends Vue {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-size: contain;
+  background-size: cover;
 }
 .circle {
   margin-right: -60%;
@@ -79,7 +79,7 @@ p:last-child {
   opacity: 0;
   transition: 1s opacity;
 }
-p:nth-child(odd) {
+p:nth-child(even) {
   color: rgba(62, 58, 57, 0.85)!important;
 }
 .visible {
@@ -105,6 +105,9 @@ p:nth-child(odd) {
 .link-container span {
   color: #20ac70;
 }
+.link-container * {
+  font-weight: 900;
+}
 .info-box {
   font-family: "Miriam Libre", sans-serif;
   color: rgba(62, 58, 57, 0.85);
@@ -113,7 +116,7 @@ p:nth-child(odd) {
   padding: 40px;
 }
 .logo {
-  width: 100%;
+  width: 70%;
   padding-bottom: 40px;
 }
 .about {
@@ -124,6 +127,7 @@ p:nth-child(odd) {
   bottom: 60px;
   left: 60px;
   width: 400px;
+  padding: 60px;
 }
 @-moz-keyframes spin {
   100% {
