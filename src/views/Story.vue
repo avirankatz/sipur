@@ -11,7 +11,7 @@
       <h2><span>ספרו לנו > </span>sipur.soficoop.com</h2>
     </div>
     <div class="about info-box">
-      <img src="../assets/logo.png" alt="logo" width="350">
+      <img class="logo" src="../assets/logo.png" alt="logo">
       <h3>
           Sofi הוא קואופרטיב תוכנה, שזה אומר חברת תוכנה למטרות רווח - במודל בעלות שיתופי ושוויוני. 
           כל אחת מעובדות הקואופרטיב, בהווה ובעתיד, מהווה בעלים ושותפה שווה, יחד עם שאר העובדות. 
@@ -63,6 +63,7 @@ export default class Home extends Vue {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background-size: contain;
 }
 .circle {
   margin-right: -60%;
@@ -79,7 +80,7 @@ p:last-child {
   transition: 1s opacity;
 }
 p:nth-child(odd) {
-  color: rgba(62, 58, 57, 0.85);
+  color: rgba(62, 58, 57, 0.85)!important;
 }
 .visible {
   opacity: 1 !important;
@@ -88,7 +89,11 @@ p:nth-child(odd) {
   float: right;
   position: absolute;
   margin-right: 60px;
+  margin-top: 60px;
   z-index: 1;
+}
+.story-header {
+  margin-bottom: 30px;
 }
 .link-container {
   float: left;
@@ -103,9 +108,13 @@ p:nth-child(odd) {
 .info-box {
   font-family: "Miriam Libre", sans-serif;
   color: rgba(62, 58, 57, 0.85);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #ededed;
   border-radius: 5px;
-  padding: 15px;
+  padding: 40px;
+}
+.logo {
+  width: 100%;
+  padding-bottom: 40px;
 }
 .about {
   float: left;
